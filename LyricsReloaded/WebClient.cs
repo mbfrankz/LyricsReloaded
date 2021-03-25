@@ -32,7 +32,7 @@ namespace CubeIsland.LyricsReloaded
 {
     public class WebClient
     {
-        private static readonly Regex ENCODING_REGEX = new Regex("<meta\\s+http-equiv=[\"']?content-type[\"']?\\s+content=.*?;\\s*charset\\s*=\\s*([a-z0-9-]+)[^>]*>|<\\?xml.+?encoding=\"([^\"]).*?\\?>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex ENCODING_REGEX = new Regex("<meta\\s+http-equiv=[\"']?content-type[\"']?\\s+content=.*?;\\s*charset\\s*=\\s*([a-z0-9-]+)[^>]*>|<\\?xml.+?encoding=\"([^\"]).*?\\?>|<meta\\s*data-react-helmet=\"true\"\\s*charset=\"([^\"]*?)\"", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private readonly LyricsReloaded lyricsReloaded;
         private readonly int timeout;
